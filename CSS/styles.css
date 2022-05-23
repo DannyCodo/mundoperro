@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+  height: 100%;
+  
+}
+
+body, header, main, footer {
+  border: 3px red solid;
+  min-height: 50px;
+  margin: 0.5rem;
+  min-width: 400px;
+  background-color: pink;
+}
+
+main {
+  min-height: 100px;
+}
