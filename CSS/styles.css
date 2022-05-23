@@ -18,5 +18,17 @@ body, header, main, footer {
 }
 
 main {
-  min-height: 100px;
+  min-height: 200px;
+}
+
+main>div {
+  border: 2px green solid;
+  min-height: 180px;
+  margin: o.5rem;
+}
+aside {
+  border: 2px blue solid;
+  min-height: 50px;
+  margin: o.5rem;
+  
 }
