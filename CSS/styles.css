@@ -1,5 +1,5 @@
 * {
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -22,13 +22,14 @@ main {
 }
 
 main>div {
+  /* hijo directo del main */
   border: 2px green solid;
   min-height: 180px;
-  margin: o.5rem;
+  margin: 0.5rem;
 }
-aside {
+main>aside {
   border: 2px blue solid;
-  min-height: 50px;
-  margin: o.5rem;
+  min-height: 180px;
+  margin: 0.5rem;
   
 }
