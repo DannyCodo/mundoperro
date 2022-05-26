@@ -19,6 +19,7 @@ body, header, main, footer {
 
 main {
   min-height: 200px;
+  overflow: auto;
 }
 
 main>div {
@@ -26,10 +27,41 @@ main>div {
   border: 2px green solid;
   min-height: 180px;
   margin: 0.5rem;
+  /* overflow: auto; */
 }
 main>aside {
   border: 2px blue solid;
   min-height: 180px;
   margin: 0.5rem;
-  
+  width: auto;
+  float: left;
 }
+
+.header-logo img {
+  height: 120px;
+  width: auto;
+  /* width: 10%; */
+}
+
+/* .header-logo  */header {
+box-shadow: 5px 10px 8px #888888;
+ /* background-color: yellow;  */
+}
+
+
+.contenido-principal {
+  min-width: 70%;
+  float: left;
+}
+
+h1 {
+  color:#8000ff;
+  font-family: "Lucida Handwriting", "Times New Roman", Times, serif;
+}
+/* img {
+ height: 100%;
+ width: 100%;
+ object-fit: contain;
+} */
+
+
