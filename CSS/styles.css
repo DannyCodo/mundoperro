@@ -44,8 +44,25 @@ main>aside {
 }
 
 /* .header-logo  */header {
-box-shadow: 5px 10px 8px #888888;
+  padding: 20px;
+  box-shadow: 5px 10px 20px red inset;
+/* box-shadow: 5px 10px 8px #888888; */
+/*   box-shadow: 0 0 0.5rem rgb(83 78 76 / 90%); */
  /* background-color: yellow;  */
+}
+
+.header-menubar ul {
+  list-style: none;
+}
+
+.header-menubar a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-menubar a:hover {
+  color:#8000ff;
+  font-size: 120%;
 }
 
 
