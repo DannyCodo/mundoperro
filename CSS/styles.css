@@ -20,6 +20,7 @@ body, header, main, footer {
 main {
   min-height: 200px;
   overflow: auto;
+/*   border: 0px; */
 }
 
 main>div {
@@ -36,6 +37,14 @@ main>aside {
   width: auto;
   float: left;
 }
+
+
+.header-presentacion {
+  display: flex;
+  justify-content: space-between;
+/*   flex-direction: row; */
+}
+
 
 .header-logo img {
   height: 120px;
@@ -81,4 +90,7 @@ h1 {
  object-fit: contain;
 } */
 
-
+.pie-principal {
+  padding: 20px;
+  box-shadow: -5px -10px 20px red inset;
+}
