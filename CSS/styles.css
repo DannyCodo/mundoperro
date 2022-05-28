@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+
+:root {
+  --fondo-rosado: pink;
+  --letra-violeta: #8000ff;
+  --font-family-h1: 'Tangerine', cursive;
+}
+
+
 * {
   /* padding: 0; */
   box-sizing: border-box;
@@ -10,13 +20,16 @@ html {
 }
 
 body, header, main, footer {
-  border: 3px red solid;
+  border: 3px red solid;  /* usar 3px en el maquetado 1px en en la version final */
   min-height: 50px;
   margin: 0.5rem;
   min-width: 400px;
-  background-color: pink;
+  background-color: var(--fondo-rosado);
 }
 
+body {
+  /*   border: 0px; */
+}
 main {
   min-height: 200px;
   overflow: auto;
@@ -38,6 +51,8 @@ main>aside {
   float: left;
 }
 
+
+/* //////////////////////  header  ////////////////////// */
 
 .header-presentacion {
   display: flex;
@@ -62,6 +77,16 @@ main>aside {
 
 .header-menubar ul {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-menubar ul li {
+  display: flex;
+  margin: 0px 1rem;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .header-menubar a {
@@ -70,8 +95,9 @@ main>aside {
 }
 
 .header-menubar a:hover {
-  color:#8000ff;
+  color: var(--letra-violeta);
   font-size: 120%;
+  /* font-weight: bold; */
 }
 
 
@@ -81,8 +107,10 @@ main>aside {
 }
 
 h1 {
-  color:#8000ff;
-  font-family: "Lucida Handwriting", "Times New Roman", Times, serif;
+  color: var(--letra-violeta);
+  font-family: var(--font-family-h1);
+  font-size: 500%;
+/*   font-family: "Lucida Handwriting", "Times New Roman", Times, serif; */ /* Esta fuente queda mejor con todo en mayúsculas */
 }
 /* img {
  height: 100%;
