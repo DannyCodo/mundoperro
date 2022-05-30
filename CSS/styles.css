@@ -104,6 +104,7 @@ body {
 
 main {
   min-height: 200px;
+  /* height: 80vh; */
   overflow: auto;
 /*   border: 0px; */
 }
@@ -146,6 +147,11 @@ h1 {
  width: 100%;
  object-fit: contain;
 } */
+
+
+
+
+/* //////////////////////  Registro - formulario  ////////////////////// */
 
 .formulario {
   display: grid;
@@ -250,7 +256,10 @@ h1 {
     font-size: 120%;
     /* font-weight: bold; */
   }
-  
+
+  h1 {
+  font-size: 350%;
+  }
 }
 
 
@@ -272,6 +281,29 @@ h1 {
   width: auto;
   /* width: 10%; */
 }
+
+h1 {
+  font-size: 200%;
+}
   
 }
   
+
+/* Mobilephone chico */
+@media screen and (max-width: 411px) {
+/* 
+:root {
+  --fondo-rosado: lightcyan;
+}
+ */
+.header-logo img {
+  height: 50px;
+  width: auto;
+  /* width: 10%; */
+}
+
+h1 {
+  font-size: 150%;
+}
+  
+}
