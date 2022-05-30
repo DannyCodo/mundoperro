@@ -13,8 +13,9 @@
 <body>
 
   <!-- ////////////  ENCABEZADO  //////////// -->
-  <header class="header-logo">
-  
+  <header class="header-logo" id="encabezado">
+  <div class="header-logo-div" >
+    
     <!-- ~~~~~~~~~~  LOGO / PRESENTACION ~~~~~~~~~~ -->
     <div class = "header-presentacion">
       <!-- logo --> <!-- Agregar en próxima etapa - Cuidado que va a alterar las proporciones en el flex-->
@@ -22,28 +23,43 @@
       <img src ="IMAGES/derecha1.jpg" alt="perro a la derecha">
     </div>
     
-    <i class="fa-solid fa-bars"></i>
+    <!-- <i class="fa-solid fa-bars"></i>  -->   <!-- para menu hamburguesa  -->
+    
     <!-- <i class="fa-solid fa-dog"></i> -->
     <!-- <i class="fa-solid fa-paw"></i> -->
     <!-- https://fontawesome.com/v6/icons/bars?s=solid -->
 
-    <!-- ~~~~~~~~~~  nav (menu)  ~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~  nav (menu horizontal)  ~~~~~~~~~~ -->
     <nav class="header-menubar">
 
       <ul>
-        <li><a href="index.html">Principal</a></li>
+        <li><a href="index.html">Mundo Perro</a></li>
         <li><a href="tips.html">Tips</a></li>
         <li><a href="register.html">Registro</a></li>
         
       </ul>
     </nav>
+
+    <!-- ~~~~~~~~~~  nav (menu hamburguesa)  ~~~~~~~~~~ -->
+    <nav class="header_hamburger_inactive" id="hamburger_menu">
+       <ul>
+        <li><a href="index.html">Mundo Perro</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="register.html">Registro</a></li>
+        
+      </ul>
+<!--     en el futuro se modificará empleando menu hambueguesa y javascript -->
+      
+    </nav>
+
+  </div>
     
   </header>
 
 
   
   <!-- ////////////  PRINCIPAL //////////// -->
-  <main>
+  <main class="principal">
 
     <div class="contenido-principal">
       <h1>Mundo Perro - Citas para perros</h1>
@@ -67,7 +83,23 @@
     <h3>CONTACTO y SUGERENCIAS</h3>
     <p>contacto@mundoperro.com</p>
   </footer>
-  
+
+
+  <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("encabezado");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
 </body>
 
 

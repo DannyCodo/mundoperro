@@ -30,36 +30,32 @@ body, header, main, footer {
 body {
   /*   border: 0px; */
 }
-main {
-  min-height: 200px;
-  overflow: auto;
-/*   border: 0px; */
-}
-
-main>div {
-  /* hijo directo del main */
-  border: 2px green solid;
-  min-height: 180px;
-  margin: 0.5rem;
-  /* overflow: auto; */
-}
-main>aside {
-  border: 2px blue solid;
-  min-height: 180px;
-  margin: 0.5rem;
-  width: auto;
-  float: left;
-}
 
 
 /* //////////////////////  header  ////////////////////// */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* .sticky + .main {
+  padding-top: 102px;
+} */
+
+/* .header-logo-div {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+
 
 .header-presentacion {
   display: flex;
   justify-content: space-between;
 /*   flex-direction: row; */
 }
-
 
 .header-logo img {
   height: 120px;
@@ -100,11 +96,44 @@ main>aside {
   /* font-weight: bold; */
 }
 
+.header_hamburger_inactive {
+  display: none;
+}
 
+/* //////////////////////  main  ////////////////////// */
+
+main {
+  min-height: 200px;
+  overflow: auto;
+/*   border: 0px; */
+}
+
+main>div {
+  /* hijo directo del main */
+  border: 2px green solid;
+  min-height: 180px;
+  margin: 0.5rem;
+  /* overflow: auto; */
+}
+main>aside {
+  border: 2px blue solid;
+  min-height: 180px;
+  margin: 0.5rem;
+  width: auto;
+  float: left;
+}
+
+/* //////////////////////  Contenido Principal 
+                            main de index.html  ////////////////////// */
+.principal main {
+  display: grid;
+  grid-template-columns: repe
+}
 .contenido-principal {
   min-width: 70%;
   float: left;
 }
+
 
 h1 {
   color: var(--letra-violeta);
@@ -118,7 +147,131 @@ h1 {
  object-fit: contain;
 } */
 
+.formulario {
+  display: grid;
+}
+
+.formulario .form_item {
+  margin: 5px;
+}
+
+/* .formulario .form_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.mascota h4 {
+  color: var(--margin: ;ioleta);
+}
+
+.mascota .form_item label {
+  font-family: var(--font-family-h1);
+  color: var(--letra-violeta);
+  font-size: 2em;
+}
+
+/* .humano .form_item label {
+  font-family: var(--font-family-h1);
+  color: var(--letra-violeta);
+  font-size: 2em;
+} */
+
+
+.formulario button {
+  background-color: var(--letra-violeta);
+  font-family: var(--font-family-h1);
+  color: var(--fondo-rosado);
+  font-size: 1.5em;
+  border-radius: 5px;
+  width: 10%;
+  /* padding: 5px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background-color: var(--fondo-rosado);
+  color: var(--letra-violeta);
+  border-color: black;
+  /* font-weight: 600; */
+}
+
+
+/* //////////////////////  footer  ////////////////////// */
 .pie-principal {
   padding: 20px;
   box-shadow: -5px -10px 20px red inset;
 }
+
+/* //////////////////////  responsive  ////////////////////// */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+  .header-logo img {
+  height: 90px;
+  width: auto;
+  /* width: 10%; */
+  }
+  
+  .header-menubar {
+    display: none;
+  }
+
+  .header_hamburger_inactive {
+    display: block;
+  }
+
+  .header_hamburger_inactive ul {
+  list-style: none;
+  /* display: flex;
+  justify-content: space-around; */
+  }
+
+/* .header-menubar ul li {
+  display: flex;
+  margin: 0px 1rem;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+  .header_hamburger_inactive a {
+    /* text-decoration: none; */
+    color: black;
+  }
+  
+  .header_hamburger_inactive a:hover {
+    color: var(--letra-violeta);
+    font-size: 120%;
+    /* font-weight: bold; */
+  }
+  
+}
+
+
+/* Mobilephone */
+@media screen and (max-width: 576px) {
+ /*  .header-menubar {
+    display: none;
+  }
+
+  .header_hamburger_inactive {
+    display: block;
+  } */
+:root {
+  --fondo-rosado: lightcyan;
+}
+
+.header-logo img {
+  height: 60px;
+  width: auto;
+  /* width: 10%; */
+}
+  
+}
+  
