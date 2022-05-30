@@ -20,17 +20,21 @@ html {
 }
 
 body, header, main, footer {
-  border: 3px red solid;  /* usar 3px en el maquetado 1px en en la version final */
+  border: 1px red solid;  /* usar 3px en el maquetado 1px en en la version final */
   min-height: 50px;
   margin: 0.5rem;
-  min-width: 400px;
+  min-width: 300px;
   background-color: var(--fondo-rosado);
 }
 
 body {
-  /*   border: 0px; */
+    border: 0px;    /* maquetacion 3px */
+  min-height: 100%;
 }
 
+.pie-principal {
+  min-height: 30px;
+}
 
 /* //////////////////////  header  ////////////////////// */
 
@@ -50,6 +54,9 @@ body {
   width: 100%;
 } */
 
+.header-logo {
+  z-index: 1;
+}
 
 .header-presentacion {
   display: flex;
@@ -106,18 +113,18 @@ main {
   min-height: 200px;
   /* height: 80vh; */
   overflow: auto;
-/*   border: 0px; */
+  border: 0px;
 }
 
-main>div {
+. contenido-principal div {
   /* hijo directo del main */
-  border: 2px green solid;
+  /* border: 2px green solid;
   min-height: 180px;
-  margin: 0.5rem;
+  margin: 0.5rem; */
   /* overflow: auto; */
 }
-main>aside {
-  border: 2px blue solid;
+.aside-publicidad {
+  border: 1px red solid;
   min-height: 180px;
   margin: 0.5rem;
   width: auto;
@@ -148,7 +155,45 @@ h1 {
  object-fit: contain;
 } */
 
+.grid_container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 70% auto;
+  /* background-color: yellow; */
+  /* padding: 20px; */
+  /* grid-auto-flow: row; */
+  grid-template-areas: "contenido-principal aside-publicidad";
+}
 
+
+.contenido-principal {
+  padding: 20px;
+  grid-area: contenido-principal;
+}
+
+
+.aside-publicidad {
+  padding: 10px;  
+  /* margin: 10px; */
+  grid-area: aside-publicidad;
+}
+
+.responsiveContent {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.2%;
+  margin-bottom: 20px;
+  
+}
+
+.responsiveContent iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 /* //////////////////////  Registro - formulario  ////////////////////// */
@@ -207,11 +252,17 @@ h1 {
 }
 
 
+
+
+
 /* //////////////////////  footer  ////////////////////// */
 .pie-principal {
-  padding: 20px;
+  padding: 8px;
   box-shadow: -5px -10px 20px red inset;
 }
+
+
+
 
 /* //////////////////////  responsive  ////////////////////// */
 
@@ -265,45 +316,65 @@ h1 {
 
 /* Mobilephone */
 @media screen and (max-width: 576px) {
- /*  .header-menubar {
-    display: none;
+     /*  .header-menubar {
+        display: none;
+      }
+    
+      .header_hamburger_inactive {
+        display: block;
+      } */
+    /* :root {
+      --fondo-rosado: lightcyan;
+    } */  /* maquetacion */
+    
+    .header-logo img {
+      height: 60px;
+      width: auto;
+      /* width: 10%; */
+    }
+    
+    h1 {
+      font-size: 200%;
+    }
+    
+      .grid_container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: auto;
+      /* background-color: greenyellow; */
+      /* padding: 20px; */
+      /* grid-auto-flow: row; */
+      grid-template-areas: "contenido-principal" "aside-publicidad";
+    }
+
+  .contenido-principal {
+    width: auto;
   }
-
-  .header_hamburger_inactive {
-    display: block;
-  } */
-:root {
-  --fondo-rosado: lightcyan;
-}
-
-.header-logo img {
-  height: 60px;
-  width: auto;
-  /* width: 10%; */
-}
-
-h1 {
-  font-size: 200%;
-}
+  .aside-publicidad {
+    width: auto;
+  }
   
 }
+
+
+
   
 
 /* Mobilephone chico */
 @media screen and (max-width: 411px) {
-/* 
-:root {
-  --fondo-rosado: lightcyan;
-}
- */
-.header-logo img {
-  height: 50px;
-  width: auto;
-  /* width: 10%; */
-}
-
-h1 {
-  font-size: 150%;
-}
+    /* 
+    :root {
+      --fondo-rosado: lightcyan;
+    }
+     */
+    .header-logo img {
+      height: 50px;
+      width: auto;
+      /* width: 10%; */
+    }
+    
+    h1 {
+      font-size: 150%;
+    }
   
 }

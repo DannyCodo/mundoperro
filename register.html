@@ -11,14 +11,26 @@
  
 <body>
 
-  <!-- ENCABEZADO -->
-  <header>
-    <div class="header-logo">
-      logo
+    <!-- ////////////  ENCABEZADO  //////////// -->
+  <header class="header-logo" id="encabezado">
+  <div class="header-logo-div" >
+    
+    <!-- ~~~~~~~~~~  LOGO / PRESENTACION ~~~~~~~~~~ -->
+    <div class = "header-presentacion">
+      <!-- logo --> <!-- Agregar en próxima etapa - Cuidado que va a alterar las proporciones en el flex-->
+      <img src ="IMAGES/izquierda1.jpg" alt="perra a la izquierda">
+      <img src ="IMAGES/derecha1.jpg" alt="perro a la derecha">
     </div>
+    
+    <!-- <i class="fa-solid fa-bars"></i>  -->   <!-- para menu hamburguesa  -->
+    
+    <!-- <i class="fa-solid fa-dog"></i> -->
+    <!-- <i class="fa-solid fa-paw"></i> -->
+    <!-- https://fontawesome.com/v6/icons/bars?s=solid -->
 
+    <!-- ~~~~~~~~~~  nav (menu horizontal)  ~~~~~~~~~~ -->
     <nav class="header-menubar">
-      nav (menu)
+
       <ul>
         <li><a href="index.html">Mundo Perro</a></li>
         <li><a href="tips.html">Tips</a></li>
@@ -26,9 +38,24 @@
         
       </ul>
     </nav>
+
+    <!-- ~~~~~~~~~~  nav (menu hamburguesa)  ~~~~~~~~~~ -->
+    <nav class="header_hamburger_inactive" id="hamburger_menu">
+       <ul>
+        <li><a href="index.html">Mundo Perro</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="register.html">Registro</a></li>
+        
+      </ul>
+<!--     en el futuro se modificará empleando menu hambueguesa y javascript -->
+      
+    </nav>
+
+  </div>
     
   </header>
 
+  
 <main class="registro">
 
   <h2>¡Encontrá pareja para tu mascota!</h2>

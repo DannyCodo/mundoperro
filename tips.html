@@ -13,14 +13,26 @@
   
 <body>
 
-   <!-- ENCABEZADO -->
-  <header>
-    <div class="header-logo">
-      logo
+   <!-- ////////////  ENCABEZADO  //////////// -->
+  <header class="header-logo" id="encabezado">
+  <div class="header-logo-div" >
+    
+    <!-- ~~~~~~~~~~  LOGO / PRESENTACION ~~~~~~~~~~ -->
+    <div class = "header-presentacion">
+      <!-- logo --> <!-- Agregar en próxima etapa - Cuidado que va a alterar las proporciones en el flex-->
+      <img src ="IMAGES/izquierda1.jpg" alt="perra a la izquierda">
+      <img src ="IMAGES/derecha1.jpg" alt="perro a la derecha">
     </div>
+    
+    <!-- <i class="fa-solid fa-bars"></i>  -->   <!-- para menu hamburguesa  -->
+    
+    <!-- <i class="fa-solid fa-dog"></i> -->
+    <!-- <i class="fa-solid fa-paw"></i> -->
+    <!-- https://fontawesome.com/v6/icons/bars?s=solid -->
 
+    <!-- ~~~~~~~~~~  nav (menu horizontal)  ~~~~~~~~~~ -->
     <nav class="header-menubar">
-      nav (menu)
+
       <ul>
         <li><a href="index.html">Mundo Perro</a></li>
         <li><a href="tips.html">Tips</a></li>
@@ -28,13 +40,30 @@
         
       </ul>
     </nav>
+
+    <!-- ~~~~~~~~~~  nav (menu hamburguesa)  ~~~~~~~~~~ -->
+    <nav class="header_hamburger_inactive" id="hamburger_menu">
+       <ul>
+        <li><a href="index.html">Mundo Perro</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="register.html">Registro</a></li>
+        
+      </ul>
+<!--     en el futuro se modificará empleando menu hambueguesa y javascript -->
+      
+    </nav>
+
+  </div>
     
   </header>
+
 
   
 
   <main>
-    <div class="contenido-tips">
+    <div class="grid_container">
+    <!-- <div class="contenido-tips"> -->
+      <div class="contenido-principal">
       <h1>Tips</h1>
       <h3><i class="fa-solid fa-dog"></i>   ¿Cómo elegir la pareja ideal para tu perro?</h3>
       
@@ -45,7 +74,8 @@
       <br>
 
       <h3><i class="fa-solid fa-dog"></i>   Una cita para perros</h3>
-     
+
+      <div class="responsiveContent">
       <iframe id="video-cita"
         title="Una cita para perros"
         width="420" 
@@ -53,9 +83,12 @@
         allowfullscreen
         src="https://www.youtube.com/embed/Lp5e0wGViLw">
       </iframe>
+      </div>
 
      
     </div>  
+
+     
 
     
     <aside class="aside-publicidad">
@@ -63,7 +96,8 @@
       <p>Disponible<br>ponerse en contacto por mail</p>
 
     </aside>
-
+  </div>
+    
   </main>
 
    <!-- PIE DE PAGINA -->
@@ -71,5 +105,23 @@
     <h3>CONTACTO y SUGERENCIAS</h3>
     <p>contacto@mundoperro.com</p>
   </footer>
+
+
+  <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("encabezado");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
 </body>
 </html>
